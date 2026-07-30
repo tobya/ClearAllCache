@@ -17,9 +17,6 @@ class ClearAllCacheServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('clearallcache')
-            ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_clearallcache_table')
             ->hasCommand(ClearAllCacheCommand::class);
     }
 }
