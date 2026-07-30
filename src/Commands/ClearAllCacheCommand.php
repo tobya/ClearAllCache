@@ -18,7 +18,7 @@ class ClearAllCacheCommand extends Command
         $this->info('Clearing default cache.');
         Artisan::call('cache:clear',[], $this->output);
 
-        $cachelist = config('cache.clear_stores');
+        $cachelist = config('cache.stores_in_use');
 
         foreach ($cachelist as $cacheStore) {
             $this->info('Clearing cache: ' . $cacheStore);
